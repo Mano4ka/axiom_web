@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {  
+  --breakpoint-w_1860: 1860px;
+  --breakpoint-w_1400: 1400px;
+  --breakpoint-w_1000: 1000px;
+  --breakpoint-w_700: 700px;
+  --breakpoint-w_500: 500px;
+  --breakpoint-w_380: 380px;
+}
+
+@layer utilities {
+  .scrollbar__none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar__none::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* :root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f8fafc;
+  }
+} */
+
+html, body {
+  max-width: 100vw;
+  color: var(--foreground);
+  background: #161616;
+  font-family: 'Bahnschrift', sans-serif;
+}

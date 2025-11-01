@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('/axiom_web/fonts/Bahnschrift.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ComplianceSans';
+  src: url('/axiom_web/fonts/ComplianceSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Homenaje';
+  src: url('/axiom_web/fonts/Homenaje.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-compliance {
+  font-family: 'ComplianceSans', system-ui, sans-serif;
+}
+
+.font-homenaje {
+  font-family: 'Homenaje', system-ui, sans-serif;
+}
+
+.font-bahnschrift {
+  font-family: 'Bahnschrift', system-ui, sans-serif;
+}
