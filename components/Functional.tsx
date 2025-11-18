@@ -216,7 +216,7 @@ export const Functional = () => {
                 {features.map((feature, i) => (
                   <SwiperSlide key={i} className="h-[55px] overflow-hidden w_700:h-[160px]" style={{ marginBottom: '10px' }}>
                     <div onClick={() => goToSlide(i)} className={`relative cursor-pointer flex justify-between items-center gap-[10px] h-full bg-[#1C1C1C] rounded-2xl w-full px-6 py-[15px] transition-all duration-300 opacity-40 hover:opacity-100 border border-[#444444] ${activeIndex === i ? 'opacity-100 max-[768px]:shadow-inner' : ''}`} style={{ boxShadow: activeIndex === i ? 'rgba(0, 0, 0, 0.06) 0px 4px 8px 0px' : 'none'}}>
-                      <Image src={feature.bg.img} alt={getText(feature.name)} width={50} height={50}  className={`absolute w-auto rotate-[${feature.bg.rotate}] w_500:h-[200px] h-[100px] object-cover right-[30px]`} />
+                      <Image src={feature.bg.img} alt={getText(feature.name)} width={50} height={50} style={{rotate: `${feature.bg.rotate}`}} className={`absolute w-auto w_500:h-[200px] h-[100px] object-cover right-[30px]`} />
                       <div className="text-white  flex-col font-semibold text-xl flex justify-between">
                           <h4 className={`w_700:text-[40px]/[48px] text-[15px]/[18px] ${activeIndex === i ? 'text-[#fff]' : 'text-[#ffffff66]'} font-semibold tracking-wide group-hover:text-white transition-colors`}>
                               {getText(feature.name)}
