@@ -1,0 +1,26 @@
+[
+  {
+    "name": { "ru": "Прочее", "en": "Other" },
+    "links": [
+      { "name": { "ru": "Поддержка", "en": "Support" }, "link": "#support" },
+      { "name": { "ru": "Форум", "en": "Forum" }, "link": "#forum" },
+      { "name": { "ru": "Discord", "en": "Discord" }, "link": "#discord" }
+    ]
+  },
+  {
+    "name": { "ru": "Поддержка", "en": "Support" },
+    "links": [
+      { "name": { "ru": "Тех. поддержка", "en": "Technical support" }, "link": "#tech-support" },
+      { "name": { "ru": "FAQ", "en": "FAQ" }, "link": "#faq" },
+      { "name": { "ru": "Контакты", "en": "Contacts" }, "link": "#contacts" }
+    ]
+  },
+  {
+    "name": { "ru": "О нас", "en": "About Us" },
+    "links": [
+      { "name": { "ru": "О компании", "en": "About company" }, "link": "#about" },
+      { "name": { "ru": "История", "en": "History" }, "link": "#history" },
+      { "name": { "ru": "Команда", "en": "Team" }, "link": "#team" }
+    ]
+  }
+]

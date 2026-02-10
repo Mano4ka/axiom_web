@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Bahnschrift';
-  src: url('/axiom_web/fonts/Bahnschrift.ttf') format('truetype');
+  src: url('/fonts/Bahnschrift.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'ComplianceSans';
-  src: url('/axiom_web/fonts/ComplianceSans.ttf') format('truetype');
+  src: url('/fonts/ComplianceSans.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Homenaje';
-  src: url('/axiom_web/fonts/Homenaje.ttf') format('truetype');
+  src: url('/fonts/Homenaje.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

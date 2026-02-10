@@ -1,0 +1,8 @@
+[
+    { "value": "23M", "label": { "ru": "Игр в библиотеке", "en": "Games in the library" }, "circleColor": "#CD8C00" },
+    { "value": "23M", "label": { "ru": "Терабайт загружено", "en": "Terabyte loaded" }, "circleColor": "#FFFFFF" },
+    { "value": "23M", "label": { "ru": "Игр скачано", "en": "Games downloaded" }, "circleColor": "#FF0095" },
+    { "value": "23M", "label": { "ru": "Дней Работы", "en": "Days Of Work" }, "circleColor": "#8BFFB0" },
+    { "value": "23M", "label": { "ru": "Всего пользователей", "en": "Total users" }, "circleColor": "#543DFF" },
+    { "value": "23M", "label": { "ru": "Игр скачано", "en": "Games downloaded" }, "circleColor": "#00FF1A" }
+]

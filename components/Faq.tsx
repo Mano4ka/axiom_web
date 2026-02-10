@@ -3,59 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { useT } from '@/lib/i18n';
 import { useScrollAnimation } from '@/lib/useScrollAnimation';
-
-const faqData = [
-  {
-    question: {
-      ru: 'Можно ли играть офлайн?',
-      en: 'Can I play offline?',
-    },
-    answer: {
-      ru: 'Да, после установки многие игры можно запускать без интернета — проверьте описание игры.',
-      en: 'Yes, after installation many games can be launched without internet — check the game description.',
-    },
-  },
-  {
-    question: {
-      ru: 'Поддерживает ли лаунчер облачные сохранения?',
-      en: 'Does the launcher support cloud saves?',
-    },
-    answer: {
-      ru: 'Да, для большинства игр доступны облачные сохранения — ваш прогресс будет в безопасности.',
-      en: 'Yes, cloud saves are available for most games — your progress will be safe.',
-    },
-  },
-  {
-    question: {
-      ru: 'Нужно ли платить за использование лаунчера?',
-      en: 'Do I need to pay for using the launcher?',
-    },
-    answer: {
-      ru: 'Нет, лаунчер полностью бесплатен.',
-      en: 'No, the launcher is completely free.',
-    },
-  },
-  {
-    question: {
-      ru: 'Могу ли я играть вместе с друзьями?',
-      en: 'Can I play with friends?',
-    },
-    answer: {
-      ru: 'Если игра поддерживает мультиплеер — да.',
-      en: 'If the game supports multiplayer — yes.',
-    },
-  },
-  {
-    question: {
-      ru: 'Может ли лаунчер повредить мой компьютер?',
-      en: 'Can the launcher damage my computer?',
-    },
-    answer: {
-      ru: 'Нет, лаунчер не вносит изменений в систему и не устанавливает постороннее ПО — только те игры, которые вы выбираете сами.',
-      en: 'No, the launcher doesn\'t make system changes or install third-party software — only the games you choose yourself.',
-    },
-  }
-];
+import {faqData} from '@/data/faq';
 
 export const Faq = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -75,13 +23,13 @@ export const Faq = () => {
     <section className="relative w-full py-20 overflow-hidden">
       <div className="overflow-hidden">
         <div className="absolute left-[10px] top-[50px] space-y-4">
-          <Image src="images/bg/question_1.svg" alt="AXIOM Logo" width={64} height={140} className="rotate-[20.43deg]" />
+          <Image src="images/bg/question_1.svg" alt="bg" width={64} height={140} className="rotate-[20.43deg]" />
         </div>
         <div className="absolute left-[-50px] top-[420px] space-y-4">
-          <Image src="images/bg/question.svg" alt="AXIOM Logo" width={140} height={420} className="rotate-[20deg]" />
+          <Image src="images/bg/question.svg" alt="bg" width={140} height={420} className="rotate-[20deg]" />
         </div>
         <div className="absolute right-[-100px] top-[50px] scale-x-[-1]">
-          <Image src="images/bg/question.svg" alt="AXIOM Logo" width={310} height={500} className="rotate-[20deg]" />
+          <Image src="images/bg/question.svg" alt="bg" width={310} height={500} className="rotate-[20deg]" />
         </div>
       </div>
 

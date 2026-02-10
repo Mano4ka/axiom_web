@@ -20,12 +20,6 @@ const translations = {
       en: 'Your personal gaming hub. Manage your library, track updates, and launch your favorite games in just a few clicks. Discover games in a new way!',
     }
   },
-  header: {
-    about: { ru: 'О нас', en: 'About' },
-    products: { ru: 'Наши продукты', en: 'Products' },
-    download: { ru: 'Скачать', en: 'Download' },
-    contact: { ru: 'Связь', en: 'Contact' },
-  },
   functional: {
     functionality: { ru: 'Обзор функционала', en: 'Review of functionality' },
     launcher: { ru: 'LAUNCHER', en: 'LAUNCHER' },

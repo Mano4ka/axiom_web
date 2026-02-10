@@ -8,13 +8,13 @@ import { Faq } from '@/components/Faq'
 
 export default function Home() {
   return (
-    <div className=" ">
+    <div>
       <Header />
-      <main className="">
+      <main>
         <Hero />
         <hr className='text-white' />
         <Marquee imageSrc="images/logo.svg" count={0} speed={20} pauseOnHover className="py-[22.5px]" />
-        <hr className='py-[1px] 1border-[rgba(255,_255,_255,_0.1)]' />
+        <hr className='py-[1px] border-[rgba(255,_255,_255,_0.1)]' />
         <Info />
         <hr className='py-[1px] border-[rgba(255,_255,_255,_0.1)]' />
         <Functional />

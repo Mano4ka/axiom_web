@@ -1,0 +1,22 @@
+[
+  { 
+    "icon": "images/social/tg.svg", 
+    "link": "https://example.com/", 
+    "color": "#53a4e4" 
+  },
+  { 
+    "icon": "images/social/yt.svg", 
+    "link": "https://example.com/", 
+    "color": "#ea3323" 
+  },
+  { 
+    "icon": "images/social/dc.svg", 
+    "link": "https://example.com/", 
+    "color": "#434ee4" 
+  },
+  { 
+    "icon": "images/social/tt.svg", 
+    "link": "https://example.com/", 
+    "color": "#9e5c5c3a"
+  }
+]

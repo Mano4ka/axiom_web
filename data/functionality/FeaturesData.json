@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": { "ru": "Простая навигация", "en": "Simple navigation" },
+    "info": {
+      "ru": "Наш интерфейс разработан с учетом удобства пользователей, позволяя легко находить нужные разделы и быстро выполнять необходимые действия.",
+      "en": "Our interface is designed with user convenience in mind, allowing you to easily find the sections you need and quickly perform necessary actions."
+    },
+    "img": "images/hero/hero_1.png",
+    "bg": {
+      "img": "images/fatures/nav.svg",
+      "rotate": "0"
+    }
+  },
+  {
+    "id": 2,
+    "name": { "ru": "Поддержка модов", "en": "Mod support" },
+    "info": {
+      "ru": "Поддержка официальных и пользовательских модов с установкой в один клик.",
+      "en": "Support for official and user mods with one-click installation."
+    },
+    "img": "images/hero/hero_2.png",
+    "bg": {
+      "img": "images/fatures/file.svg",
+      "rotate": "12.84deg"
+    }
+  },
+  {
+    "id": 3,
+    "name": { "ru": "Система друзей", "en": "Friends system" },
+    "info": {
+      "ru": "Следите за активностью друзей, смотрите кто онлайн, отправляйте приглашения в игру и общайтесь в текстовом чате.",
+      "en": "Follow your friends\" activity, see who\"s online, send game invites, and chat in text."
+    },
+    "img": "images/hero/hero_3.png",
+    "bg": {
+      "img": "images/fatures/friend.svg",
+      "rotate": "7.78deg"
+    }
+  },
+  {
+    "id": 4,
+    "name": { "ru": "Мультиплатформенность", "en": "Cross-platform" },
+    "info": {
+      "ru": "Работает на Windows, Linux и macOS",
+      "en": "Works on Windows, Linux, and macOS"
+    },
+    "img": "images/hero/hero.svg",
+    "bg": {
+      "img": "images/fatures/nav.svg",
+      "rotate": "0"
+    }
+  },
+  {
+    "id": 5,
+    "name": { "ru": "Быстрая загрузка", "en": "Fast loading" },
+    "info": {
+      "ru": "Мгновенный запуск игр и приложений без задержек",
+      "en": "Instant launch of games and apps without delays"
+    },
+    "img": "images/hero/hero_1.png",
+    "bg": {
+      "img": "images/fatures/file.svg",
+      "rotate": "12.84deg"
+    }
+  }
+]

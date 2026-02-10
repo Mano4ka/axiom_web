@@ -3,11 +3,17 @@ import { useState, useEffect } from 'react';
 import Logo from '@/components/ui/Logo';
 import Image from 'next/image';
 import { useT } from '@/lib/i18n';
+import { HeaderData } from '@/data/header';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const { t, lang, changeLang } = useT();
   const [open, setOpen] = useState(false);
+
+  const getText = (text: string | { ru: string; en: string }) => {
+    if (typeof text === 'string') return text;
+    return text[lang] ?? text.en ?? text.ru ?? '';
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);
@@ -36,10 +42,11 @@ export default function Header() {
 
         <div className="flex p-[3px] w_500:p-[11px] w_500:text-[16px] text-[11px]/[13px]  w_500:rounded-[19px] rounded-[12px] bg-[#151515] border border-[1.7px] border-[#3D3D3D] shadow-md [filter:drop-shadow(0_0_10px_rgba(98,102,98,0.5))] items-center gap-6">
           <nav className="ps-4 gap-6 flex">
-            <a className="text-[#C0C0C0] hover:text-[#FFFFFF] transition-colors" href="/">{t('header.about')}</a>
-            <a className="text-[#C0C0C0] hover:text-[#FFFFFF] transition-colors" href="/">{t('header.products')}</a>
-            <a className="text-[#C0C0C0] hover:text-[#FFFFFF] transition-colors" href="/">{t('header.download')}</a>
-            <a className="text-[#C0C0C0] hover:text-[#FFFFFF] transition-colors" href="/">{t('header.contact')}</a>
+            {HeaderData.map((item, index) => (
+              <a key={index} href={item.link} className="text-[#C0C0C0] hover:text-[#FFFFFF] transition-colors" target="_blank" rel="noopener noreferrer">
+                {getText(item.title)}
+              </a>
+            ))}
           </nav>
 
           <div className="relative lang-menu-container">

@@ -10,81 +10,8 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import { useT } from '@/lib/i18n';
-
-const social = [
-  { icon: 'images/social/tg.svg', link: 'https://test.test', color: '#53a4e4' },
-  { icon: 'images/social/yt.svg', link: 'http://test.test', color: '#ea3323' },
-  { icon: 'images/social/dc.svg', link: 'test.test', color: '#434ee4' },
-  { icon: 'images/social/tt.svg', link: 'test.test', color: '#9e5c5c3a' },
-];
-
-const features = [
-  {
-    id: '01',
-    name: { ru: 'Простая навигация', en: 'Simple navigation' },
-    info: {
-      ru: 'Наш интерфейс разработан с учетом удобства пользователей, позволяя легко находить нужные разделы и быстро выполнять необходимые действия.',
-      en: 'Our interface is designed with user convenience in mind, allowing you to easily find the sections you need and quickly perform necessary actions.',
-    },
-    img: 'images/hero/hero_1.png',
-    bg: {
-      img: 'images/fatures/nav.svg',
-      rotate: '0'
-    },
-  },
-  {
-    id: '02',
-    name: { ru: 'Поддержка модов', en: 'Mod support' },
-    info: {
-      ru: 'Поддержка официальных и пользовательских модов с установкой в один клик.',
-      en: 'Support for official and user mods with one-click installation.',
-    },
-    img: 'images/hero/hero_2.png',
-    bg: {
-      img: 'images/fatures/file.svg',
-      rotate: '12.84deg'
-    },
-  },
-  {
-    id: '03',
-    name: { ru: 'Система друзей', en: 'Friends system' },
-    info: {
-      ru: 'Следите за активностью друзей, смотрите кто онлайн, отправляйте приглашения в игру и общайтесь в текстовом чате.',
-      en: 'Follow your friends\' activity, see who\'s online, send game invites, and chat in text.',
-    },
-    img: 'images/hero/hero_3.png',
-    bg: {
-      img: 'images/fatures/friend.svg',
-      rotate: '7.78deg'
-    },
-  },
-  {
-    id: '04',
-    name: { ru: 'Мультиплатформенность', en: 'Cross-platform' },
-    info: {
-      ru: 'Работает на Windows, Linux и macOS',
-      en: 'Works on Windows, Linux, and macOS',
-    },
-    img: 'images/hero/hero.svg',
-    bg: {
-      img: 'images/fatures/nav.svg',
-      rotate: '0'
-    },
-  },
-  {
-    id: '05',
-    name: { ru: 'Быстрая загрузка', en: 'Fast loading' },
-    info: {
-      ru: 'Мгновенный запуск игр и приложений без задержек',
-      en: 'Instant launch of games and apps without delays',
-    },
-    img: 'images/hero/hero_1.png',
-    bg: {
-      img: 'images/fatures/file.svg',
-      rotate: '12.84deg'
-    },
-  },
-];
+import {FeaturesData} from '@/data/functionality';
+import {SocialData} from '@/data/social';
 
 export const Functional = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -144,7 +71,7 @@ export const Functional = () => {
                   if (!imageSwiperRef.current) return;
                   const swiper = imageSwiperRef.current;
                   if (swiper.isBeginning) {
-                    goToSlide(features.length - 1);
+                    goToSlide(FeaturesData.length - 1);
                   } else {
                     swiper.slidePrev();
                   }
@@ -164,7 +91,7 @@ export const Functional = () => {
                 onSlideChange={(swiper) => syncListFromImage(swiper.realIndex)}
                 className="w-full max-w-[500px]"
               >
-                {features.map((f, i) => (
+                {FeaturesData.map((f, i) => (
                   <SwiperSlide key={i}>
                     <div className="relative aspect-video overflow-hidden rounded-lg">
                       <Image src={f.img} alt={getText(f.name)} fill className="object-cover" />
@@ -191,7 +118,7 @@ export const Functional = () => {
             </div>
 
               <div className="mt-8 flex justify-center gap-2">
-                {features.map((_, i) => (
+                {FeaturesData.map((_, i) => (
                   <button key={i} onClick={() => goToSlide(i)} className={`w-3 h-3 rounded-full transition-all duration-300 ${activeIndex === i ? 'bg-white w-8' : 'cursor-pointer bg-white/30'}`}/>
                 ))}
               </div>
@@ -210,10 +137,10 @@ export const Functional = () => {
                 spaceBetween={10}
                 onSwiper={(s) => (listSwiperRef.current = s)}
                 onSlideChange={(swiper) => syncImageFromList(swiper.realIndex)}
-                className=" max-h-[200px] w_1000:!pr-[5px]  w_700:max-h-[515px] !overflow-hidden"
+                className=" max-h-[200px] max-w-[590px] w_1000:!pr-[5px]  w_700:max-h-[515px] !overflow-hidden"
                 navigation={{ prevEl: null, nextEl: null }}
               >
-                {features.map((feature, i) => (
+                {FeaturesData.map((feature, i) => (
                   <SwiperSlide key={i} className="h-[55px] overflow-hidden w_700:h-[160px]" style={{ marginBottom: '10px' }}>
                     <div onClick={() => goToSlide(i)} className={`relative cursor-pointer flex justify-between items-center gap-[10px] h-full bg-[#1C1C1C] rounded-2xl w-full px-6 py-[15px] transition-all duration-300 opacity-40 hover:opacity-100 border border-[#444444] ${activeIndex === i ? 'opacity-100 max-[768px]:shadow-inner' : ''}`} style={{ boxShadow: activeIndex === i ? 'rgba(0, 0, 0, 0.06) 0px 4px 8px 0px' : 'none'}}>
                       <Image src={feature.bg.img} alt={getText(feature.name)} width={50} height={50} style={{rotate: `${feature.bg.rotate}`}} className={`absolute w-auto w_500:h-[200px] h-[100px] object-cover right-[30px]`} />
@@ -246,9 +173,9 @@ export const Functional = () => {
             <p className='text-[#ffffff75] w_700:text-[32px]/[38px] text-[13px]/[16px]'>{t('functional.get_news')}</p>
         </div>
         <div className='flex mt-0 w_1400:mt-[150px] w_1860:mt-[60px] justify-between gap-[5px] w-full'>
-            {social.map((social, index) => (
-              <Button style={{ '--hover-bg': social.color } as React.CSSProperties } key={index} href={social.link} target="_blank" variant='social'>
-                <Image src={social.icon} alt="Right image" fill={false} width={200} height={80}/>
+            {SocialData.map((social, index) => (
+              <Button style={{ '--hover-bg': social.color } as React.CSSProperties } key={index} href={social.link} target="_blank" rel="noopener noreferrer" variant='social'>
+                <Image src={social.icon} alt="Icon" fill={false} width={200} height={80}/>
               </Button>
             ))}
         </div>
