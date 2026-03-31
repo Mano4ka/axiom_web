@@ -20,6 +20,7 @@ export default function RootLayout({
         <I18nProvider>
           {children}
         </I18nProvider>
+        <script src="https://cdn-l1.services.shinory.ru/shinory-public/scripts/widgets/byshinory.js" async />
       </body>
     </html>
   );
